@@ -1,14 +1,34 @@
-package bd.edu.bubr.cse;
+package bd.edu.bubt.sms;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class Application {
-    public static void main(String[] args){
-        driver driver1 = new driver( " Arafat",  "BRO1");
-        driver driver2 = new driver( " RAfi",  "A01");
-        driver driver3 = new driver( "Amol",  "As02");
+    public static void main (String[] args){
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int age;
+        double cgpa;
+        float marks;
 
-        car c1 = new car("Toyota", 0);
-        driver1.drive(c1);
-        driver2.drive(c1);
-        driver3.drive(c1);
+        System.out.print("Enter your name: ");
+        name = sc.nextLine();
+        System.out.print("Enter your age: ");
+        age = sc.nextInt();
+        System.out.println("Enter the marks for CSE341 : ");
+        marks = sc.nextFloat();
+
+       GradingAssistant gradingAssistantBUBT = new GradingAssistant();
+       bd.edu.aiub.sms.GradingAssistant gradingAssistantAIUB = new bd.edu.aiub.sms.GradingAssistant();
+
+        System.out.println();
+        System.out.println("---Student Information---");
+        System.out.println("--------");
+        System.out.println("Name : " + name);
+        System.out.println("Age = : " + age);
+        System.out.println("Grade of cse 341(BUBT): " + gradingAssistantBUBT.calculateGrades(marks));
+        System.out.println("Grade of cse 341(AIUB): " + gradingAssistantAIUB.calculateGrades(marks));
+
     }
+
 }
