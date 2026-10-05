@@ -1,34 +1,22 @@
 package bd.edu.bubt.sms;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Application {
-    public static void main (String[] args){
-        Scanner sc = new Scanner(System.in);
-        String name;
-        int age;
-        double cgpa;
-        float marks;
+    public static void main(String[] args) {
 
-        System.out.print("Enter your name: ");
-        name = sc.nextLine();
-        System.out.print("Enter your age: ");
-        age = sc.nextInt();
-        System.out.println("Enter the marks for CSE341 : ");
-        marks = sc.nextFloat();
+        // 1. Create a new Car object using the parameterized constructor
+        Car myCar = new Car("Toyota Corolla ", 120.5);
 
-       GradingAssistant gradingAssistantBUBT = new GradingAssistant();
-       bd.edu.aiub.sms.GradingAssistant gradingAssistantAIUB = new bd.edu.aiub.sms.GradingAssistant();
+        // 2. Create a new Driver object using the parameterized constructor
+        Driver myDriver = new Driver("Shah Rokan A Alam Mahin", "20255103043");
 
-        System.out.println();
-        System.out.println("---Student Information---");
-        System.out.println("--------");
-        System.out.println("Name : " + name);
-        System.out.println("Age = : " + age);
-        System.out.println("Grade of cse 341(BUBT): " + gradingAssistantBUBT.calculateGrades(marks));
-        System.out.println("Grade of cse 341(AIUB): " + gradingAssistantAIUB.calculateGrades(marks));
+        // 3. Print out some details using the getter methods
+        System.out.println("Driver Name: " + myDriver.getName());
+        System.out.println("License ID: " + myDriver.getLicenseID());
+        System.out.println("Car Model: " + myCar.getModel());
+        System.out.println("Top Speed: " + myCar.getSpeed() + " km/h");
+        System.out.println("-------------------------------------------------");
 
+        // 4. Call the drive method, which in turn calls the car's run method
+        myDriver.drive(myCar);
     }
-
 }
