@@ -1,14 +1,14 @@
-package bd.edu.bubr.cse;
+package bd.edu.bubt.cse;
 
 public class Application {
-    public static void main(String[] args){
-        Driver driver1 = new Driver( " Arafat",  "BRO1");
-        Driver driver2 = new Driver( " RAfi",  "A01");
-        Driver driver3 = new Driver( "Amol",  "As02");
+    public static  void main(String[] args){
+        Dept dept1 = new Dept("Cse");
+        Student student1= new Student("Rokan",43,dept1);
+        Teacher teacher1 = new Teacher( "Nur Quraishi", 344);
 
-        Car c1 = new Car("Toyota", 0);
-        driver1.drive(c1);
-        driver2.drive(c1);
-        driver3.drive(c1);
+
+
+        teacher1.Teach(student1);
     }
+
 }
