@@ -1,14 +1,8 @@
-package bd.edu.bubt.cse;
+package bubt.cse.edu;
 
 public class Application {
-    public static  void main(String[] args){
-        Dept dept1 = new Dept("Cse");
-        Student student1= new Student("Rokan",43,dept1);
-        Teacher teacher1 = new Teacher( "Nur Quraishi", 344);
-
-
-
-        teacher1.Teach(student1);
+    public static void main(String[] args){
+        Child child1=new Child("Brown", "O+", 5.10,"Rokan");
+        child1.display();
     }
-
 }
